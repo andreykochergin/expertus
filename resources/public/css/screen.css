@@ -1,0 +1,15 @@
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    padding-top: 40px;
+}
+.label {
+    margin: 0.1em;
+}
+button {
+    margin: 0.1em;
+}
+input {
+    margin: 0.1em;
+}

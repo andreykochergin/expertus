@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Welcome to expertus</title>
+  </head>
+  <body>
+
+    <div id="navbar"></div>
+    <div id="alert"></div>
+    <div id="loading">
+      <div class="container">
+        <div class="progress progress-striped active">
+          <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            <span class="sr-only">Загрузка...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+
+    <!-- scripts and styles -->
+    {% style "/assets/bootstrap/css/bootstrap.min.css" %}
+    {% style "/assets/bootstrap/css/bootstrap-theme.min.css" %}
+    {% style "/css/screen.css" %}
+
+    <script type="text/javascript">
+      var context = "{{servlet-context}}";
+    </script>
+    {% if dev %}
+    {% script "/js/out/goog/base.js" %}
+    {% script "/js/app.js" %}
+    <script type="text/javascript">goog.require("expertus.app");</script>
+    {% else %}
+    {% script "/js/app.js" %}
+    {% endif %}
+  </body>
+</html>
+
+
+
+

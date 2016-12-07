@@ -23,7 +23,7 @@
   (let [vacancy (-> (db/get! db-coll {:_id id} 
                              (util/str->vec-keywords fields))
                     first
-                    (assoc :_id (str (:_id %))))]
+                    (assoc :_id (str id)))]
     (if-not (empty? vacancy)
       (resp/ok vacancy)
       (resp/not-found
